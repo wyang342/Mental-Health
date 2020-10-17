@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="mentalhealth.app.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_homePageFragment"
+            app:destination="@id/homePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePageFragment"
+        android:name="mentalhealth.app.HomePageFragment"
+        android:label="fragment_home_page"
+        tools:layout="@layout/fragment_home_page" >
+        <action
+            android:id="@+id/action_homePageFragment_to_weeklyStatsFragment"
+            app:destination="@id/weeklyStatsFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homePageFragment_to_chatBotFragment"
+            app:destination="@id/chatBotFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weeklyStatsFragment"
+        android:name="mentalhealth.app.WeeklyStatsFragment"
+        android:label="fragment_weekly_stats"
+        tools:layout="@layout/fragment_weekly_stats" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="mentalhealth.app.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/chatBotFragment"
+        android:name="mentalhealth.app.ChatBotFragment"
+        android:label="fragment_chat_bot"
+        tools:layout="@layout/fragment_chat_bot" />
+</navigation>
